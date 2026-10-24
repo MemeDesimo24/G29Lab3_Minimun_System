@@ -9,6 +9,7 @@ def load_ingredients():
     """
     Loads the ingredients file
     :return a dictionary of Ingredient objects:
+    :raises FileNotFoundError if the inventory.json does not exists:
     """
     try:
         with open(get_file("inventory.json"), "r") as f:
@@ -21,6 +22,11 @@ def load_ingredients():
     return inventory
 
 def save_inventory(inventory):
+    """
+    Saves the inventory file
+    :param inventory: the inventory data to be stored:
+    :return void:
+    """
     data = {}
     for ingredient, values in inventory.items():
         data[ingredient] = [values.max_capacity, values.current_level]
@@ -28,6 +34,12 @@ def save_inventory(inventory):
         json.dump(data, f)
 
 def save_transaction(order: Order):
+    """
+    Saves the order information in the order_history.json file
+    :param order: the order information to be saved:
+    :return void:
+    :raises FileNotFoundError if the order_history.json does not exists:
+    """
     try:
         with open(get_file("order_history.json"), "r") as f:
             order_history = json.load(f)
@@ -39,6 +51,15 @@ def save_transaction(order: Order):
         json.dump(order_history, f)
 
 def place_order(user, beverage):
+    """
+    Places the order and updates the ingredient current quantities
+    :param user: the user that makes the order:
+    :param beverage: the beverage chosen:
+    :return the order details in an Order object:
+    :raises ValueError if the ingredient is not available or is not present in the inventory:
+    :raises FileNotFoundError if the inventory.json does not exists:
+    :raises FileNotFoundError if the order_history.json does not exists:
+    """
     inventory = load_ingredients()
     for ing_name in beverage.ingredients:
         if ing_name not in inventory:

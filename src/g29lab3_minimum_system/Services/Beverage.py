@@ -5,6 +5,7 @@ class Beverage:
     Beverage class
     Methods:
         - match_filter: Checks if beverage matches browsing filters
+        - to_dict: Returns the beverage details in a dictionary format
     """
     def __init__(self, name:str, price:float, ingredients:list, flag:list):
         self.name = name
@@ -28,6 +29,10 @@ class Beverage:
         return f"Name: {self.name}\tPrice: {self.price} kr\tIngredients: {self.ingredients}"
 
     def to_dict(self):
+        """
+        Formatting function for beverage objects
+        :return the beverage details in a dictionary format:
+        """
         return {
             "name": self.name,
             "price": self.price,
