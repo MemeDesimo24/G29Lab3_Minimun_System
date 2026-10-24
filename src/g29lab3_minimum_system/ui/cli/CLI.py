@@ -66,7 +66,7 @@ def init_cli():
                         print("Ingredient counters reset succcessfully!")
                     except:
                         print("Impossible to reset")
-                if option == "2":
+                elif option == "2":
                     current_user = None
                     print("Succesfully logged out!")
                 else:
