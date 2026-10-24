@@ -69,7 +69,7 @@ uv sync
 ### Run
 To start the Command Line Interface, run the main file from the root directory of the project:
 ```bash
-uv run Main.py
+python Main.py
 ```
 Alternatively, you can run it via uv:
 ```bash
