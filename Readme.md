@@ -53,6 +53,12 @@ suggestion source for project and code management and organisation.
 ### Prerequisites
 * **Python**: Check the `.python-version` file for the exact version required.
 * **uv**: This project uses `uv` for fast Python package and project management. Ensure it is installed on your system.
+* **libraries**:
+  * requests
+  * IPython
+  * os
+  * json
+  * datetime
 
 ### Installation
 Clone the repository and install the project dependencies using `uv`:
