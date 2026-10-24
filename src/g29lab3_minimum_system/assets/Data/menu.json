@@ -1,0 +1,32 @@
+[
+  {
+    "name" : "expresso",
+    "price": 15,
+    "flags": ["hot", "sugar free", "caffeine"],
+    "ingredients": ["coffee", "water"]
+  },
+  {
+    "name" : "cappuccino",
+    "price": 25,
+    "flags": ["hot", "milk", "tasty", "caffeine"],
+    "ingredients": ["coffee", "water", "milk"]
+  },
+  {
+    "name" : "lemon tea",
+    "price": 20,
+    "flags": ["hot", "sugar free", "caffeine free", "theine"],
+    "ingredients": ["black tea", "water", "lemon scent"]
+  },
+  {
+    "name" : "hot chocolate",
+    "price": 30,
+    "flags": ["hot", "chocolate", "milk", "caffeine free"],
+    "ingredients": ["cocoa", "water", "milk", "sugar"]
+  },
+  {
+    "name" : "orange juice",
+    "price": 25,
+    "flags": ["cold", "natural", "caffeine free"],
+    "ingredients": ["orange juice"]
+  }
+]

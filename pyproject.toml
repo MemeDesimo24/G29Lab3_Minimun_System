@@ -1,0 +1,18 @@
+[project]
+name = "g29lab3-minimum-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "random",
+    "requests>=2.34.2",
+    "wxpython",
+]
+
+[project.scripts]
+g29lab3-minimum-system = "g29lab3_minimum_system:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"

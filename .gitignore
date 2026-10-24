@@ -1,0 +1,15 @@
+# Ambienti virtuali
+.venv/
+venv/
+env/
+
+# Impostazioni di PyCharm
+.idea/
+
+# Cache di Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variabili d'ambiente (sicurezza)
+.env
